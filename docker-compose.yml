@@ -5,9 +5,7 @@ services:
             context: .
             dockerfile: attacker.Dockerfile
         image: attacker:latest
-        cap_add: 
-            - NET_RAW
-            - NET_ADMIN
+        privileged: true
     victim:
         build: 
             context: .
